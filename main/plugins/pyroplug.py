@@ -196,7 +196,7 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                 os.remove(file)
         except Exception:
             pass
-        await edit.delete()
+            await edit.delete()
     else:
         edit = await client.edit_message_text(sender, edit_id, "Cloning.")
         chat =  msg_link.split("t.me")[1].split("/")[1]
